@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
+import Order from './Order'
 
 export default class App extends Component {
   render() {
     return (
-      <h1 className="text-center">Welcome!</h1>
+      <div>
+        <h1>Order Form</h1>
+        <Order/> 
+      </div>
+      
     )
   }
 }
+
+
+
