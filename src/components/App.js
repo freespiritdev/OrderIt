@@ -6,12 +6,22 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Order Form</h1>
+      	<Header/>
         <Order/> 
       </div>
       
     )
   }
+}
+
+class Header extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Order It</h1>
+         </div>
+      );
+   }
 }
 
 

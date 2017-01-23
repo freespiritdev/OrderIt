@@ -4,13 +4,30 @@ import { render } from 'react-dom';
 const uuid = require('uuid');
 
 export default class Order extends Component  {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            companyname: '',
+            companyaddress: '',
+            companycity : '',
+            companystate : '',
+            companypostalcode : '',
+            lastname : '',
+            firstname: '',
+            email : '',
+            phone : '',
+            imgurl : ''
+        }
+    }
   render(){
-     let _this = this;
+    let _this = this;
+    
     return ( 
       <div>
         <form>
           <div className="form-group">
-            <input type="text"
+            <input type="text" 
             className="form-control"
             placeholder="Company Name"/>
             <input type="text"
