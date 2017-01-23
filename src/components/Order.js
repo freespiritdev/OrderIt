@@ -19,13 +19,17 @@ export default class Order extends Component  {
             phone : '',
             imgurl : ''
         }
+        this.submit = this.submit.bind(this);
+    }
+    submit(e) {
+        e.preventDefault();
     }
   render(){
     let _this = this;
     
     return ( 
       <div>
-        <form>
+        <form onSubmit={this.submit}>
           <div className="form-group">
             <input type="text" 
             className="form-control"
@@ -58,7 +62,7 @@ export default class Order extends Component  {
             className="form-control"
             placeholder="Image Link"/>
             <button type="submit" className="btn btn-success">Add</button>
-            <button type="submit" className="btn btn-warning">Reset</button>
+            <button type="reset" className="btn btn-warning">Reset</button>
           </div>     
         </form>
       </div>)
