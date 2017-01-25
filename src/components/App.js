@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Order from './Order'
+import NewOrder from './NewOrder'
+import Navbar from './Navbar'
 
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
+      	<Navbar/>
       	<Header/>
-        <Order/> 
+        <NewOrder/> 
       </div>
       
     )
@@ -17,7 +19,7 @@ export default class App extends Component {
 class Header extends React.Component {
    render() {
       return (
-         <div>
+         <div className="text-center">
             <h1>Order It</h1>
          </div>
       );

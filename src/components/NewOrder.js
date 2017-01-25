@@ -21,8 +21,17 @@ export default class Order extends Component  {
         }
         this.submit = this.submit.bind(this);
     }
-    submit(e) {
+    addOrder(){
+        let order = {
+            id: uuid(),
+            companyname : this.state.companyname,
+            companyaddress : this.state.companyaddress
+
+        }
+    }
+    submit(e){
         e.preventDefault();
+        this.setState({ });
     }
   render(){
     let _this = this;
@@ -30,7 +39,7 @@ export default class Order extends Component  {
     return ( 
       <div>
         <form onSubmit={this.submit}>
-          <div className="form-group">
+          <div className="form-group col-md-10">
             <input type="text" 
             className="form-control"
             placeholder="Company Name"/>
@@ -70,14 +79,5 @@ export default class Order extends Component  {
 }
 
 
-// export default class Root extends Component {
-//  render(){
-//    return ( 
-//      <div>
-//        <h1>Order.js file</h1>
-//      </div>)
-    
-//  }
-// }
 
 
